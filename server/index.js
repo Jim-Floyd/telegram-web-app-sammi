@@ -10,7 +10,21 @@ const bootstrap = () => {
         if(text === "/start") {
             await bot.sendMessage(
                 chatId,
-                "Sammi.ac platformasida bor kurslaarni sotib olishingiz mumkin"
+                "Sammi.ac platformasida bor kurslaarni sotib olishingiz mumkin",
+                {
+                    reply_markup: {
+                        keyboard: [
+                            [
+                                {
+                                    text: "Kurslarni ko'rish",
+                                    web_app: {
+                                        url:"https://sammi.ac"
+                                    }
+                                }
+                            ]
+                        ]
+                    }
+                }
             );
         }
     });
