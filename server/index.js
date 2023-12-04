@@ -18,7 +18,7 @@ const bootstrap = () => {
                                 {
                                     text: "Kurslarni ko'rish",
                                     web_app: {
-                                        url:"https://sammi.ac"
+                                        url:"https://telegram-web-app-sammi.vercel.app/"
                                     }
                                 }
                             ]
@@ -26,6 +26,9 @@ const bootstrap = () => {
                     }
                 }
             );
+        }
+        if(msg.web_app_data?.data){
+            
         }
     });
 };
