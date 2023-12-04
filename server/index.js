@@ -27,9 +27,6 @@ const bootstrap = () => {
                 }
             );
         }
-        if(msg.web_app_data?.data){
-            
-        }
     });
 };
 

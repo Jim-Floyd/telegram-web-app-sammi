@@ -43,14 +43,14 @@ const App = () => {
   const onCheckout = () =>{
     telegram.MainButton.text="Sotib olish"
     telegram.MainButton.show()
-  }
+  };
 
   const onSendData = useCallback(() => {
     telegram.sendData(JSON.stringify(cartItems));
   }, [cartItems]);
 
   useEffect(()=>{
-    telegram.onEvent('mainButtonClicked', onSenData);
+    telegram.onEvent('mainButtonClicked', onSendData);
     return () => telegram.offevent('mainButtonClicked', onSendData)
   }, [onSendData])
 
