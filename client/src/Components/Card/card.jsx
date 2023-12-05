@@ -17,16 +17,14 @@ const Card = props => {
     <div className='card'>
         <span className={`${count !== 0 ? "card__badge" : "card__badge-hidden"}`}>{count}</span>
 
-        <div className="image__container">
-            <img src={course.Image} alt={course.title} width={"100%"} height={"230px"} />
-        </div>
+        <div>{course.nomenclature}</div>
         <div className="card__body">
             <h2 className='card__title'>{course.title}</h2>
             <div className="card__price">
-                {course.price.toLocaleString("en-US", {
-                    style: "currency",
-                    currency: "USD"
-                })}
+                {course.price.toLocaleString()}
+            </div>
+            <div className="card__price">
+                <input type="number" />
             </div>
         </div>
         <div className="hr">
